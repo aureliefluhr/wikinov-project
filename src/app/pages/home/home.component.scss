@@ -1,0 +1,25 @@
+/* Logo euranov */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: block;
+    font-weight: 300;
+    font-size: 100px;
+    color: #35495e;
+    letter-spacing: 1px;
+  }
+  .title span {
+    font-weight: 500;
+    background: linear-gradient(-35deg, #039c7d 45%, #08e3b7 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

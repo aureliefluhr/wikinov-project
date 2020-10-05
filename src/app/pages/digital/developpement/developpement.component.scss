@@ -1,0 +1,67 @@
+.index-tab-top {
+  table {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 70%;
+    tr {
+      td {
+        :before {
+          content: '';
+          top: 0;
+          transition: all 0.5s ease 0s;
+          position: absolute;
+          z-index: -1;
+          width: 3px;
+          height: 0;
+          left: 0;
+        }
+        text-decoration: none;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        transition: color 0.5s ease;
+        :focus,
+        :hover {
+          outline: 0;
+          border-radius: 0 5px 5px 0;
+          transition: color 0.5s ease;
+          cursor: pointer;
+          color: #fff !important;
+        }
+        :after {
+          transition: all 0.5s ease 0s;
+        }
+        :focus:after,
+        :focus:before,
+        :hover:after,
+        :hover:before {
+          outline: 0;
+          border-radius: 0 5px 5px 0;
+          transition: all 0.5s ease 0s;
+          background-color: #fe6171;
+        }
+        :focus:before,
+        :hover:before {
+          width: 100%;
+          height: 75%;
+        }
+        span {
+          position: absolute;
+          font-size: 5px;
+          padding-right: 35%;
+          margin-right: 5px;
+          border-radius: 0 5px 5px 0;
+          color: #fe6171;
+          background-color: #fe6171;
+        }
+        h2 {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

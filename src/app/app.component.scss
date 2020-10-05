@@ -1,0 +1,142 @@
+    :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(128, 44, 83);
+    color: white;
+    font-weight: 600;
+    
+    nav {
+      position: absolute;
+      right: 0.5rem;
+    }
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-item {
+      margin: 0 10px;
+      text-align: center;
+      position: relative;
+    }
+    .nav-item a,
+    .under li a {
+      text-decoration: none;
+      color: #fefefe;
+    }
+    .nav-item a:hover,
+    .nav-item a:active,
+    .under li:hover {
+      color: #b4b4b4;
+    }
+    /* .nav-list .nav-item .under {
+      display: none;
+      position: absolute;
+      z-index: 1000;
+      padding: 20px 10px 3px 10px;
+      background-color: rgb(128, 44, 83);
+      color: #fefefe;
+      left: -10px;
+    }
+    .nav-list .nav-item:hover .under {
+      display: block;
+    }
+    .under li {
+      width: 100%;
+      float: none;
+      text-align: left;
+      list-style: none;
+      padding: 5px 0 5px 0;
+    } */
+  }
+
+  @media (max-width: 767px) {
+    .nav-list {
+      display: block;
+    }
+    .nav-item {
+      margin: 16px 0 16px 0;
+    }
+    /* .nav-item > a {
+      display: block;
+      background: #000037;
+      border-radius: 0 20px 20px 0;
+    }
+    .nav-list .nav-item .under {
+      display: block;
+      position: relative;
+      background-color: transparent;
+      padding: 0;
+    }
+    .under li {
+      list-style-type: square;
+      padding: 0;
+      padding-left: 40px;
+      text-align: left;
+    } */
+  }
+  @media (min-width: 768px) {
+    .nav-list {
+      display: flex;
+    }
+  }
+
+  .content {
+      max-width: 80%;
+      margin: 0 auto;
+      margin-top: 90px;
+  }
+
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+  }
+  
+  svg#Calque_1 {
+    position: fixed;
+    right: -50%;
+    top: 60px;
+    z-index: -10;
+    width: auto;
+    height: 100vh;
+  }
+

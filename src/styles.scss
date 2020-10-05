@@ -1,0 +1,253 @@
+a,
+a:visited,
+a:hover {
+  color: rgb(165, 99, 130);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(63, 18, 39);
+}
+
+
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(128, 44, 83);
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+/****************************/
+/* Template grille sections */
+/****************************/
+.grid-container {
+    margin: 0 4rem;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 2.5rem;
+      > div {
+        border-radius: 0 5% 0 5%;
+      }
+      > div:first-child {
+        background-color: #07c4bd;
+      }
+      > div:nth-child(2n) {
+        background-color: #fe6171;
+      }
+      > div:nth-child(3n) {
+        background-color: #2810da;
+      }
+      > div:nth-child(4n) {
+        background-color: #dfaf01;
+      }
+      > div:nth-child(5n) {
+        background-color: #5f50dc;
+      }
+      > *:first-child {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+      }
+      div::before {
+        content: '';
+        padding-bottom: 100%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .square {
+        position: relative;
+        text-align: center;
+        align-self: center;
+        cursor: pointer;
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+        }
+        h1 {
+          color: #fff;
+          position: absolute;
+          top: 38%;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          word-break: break-word;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+      .square h1 {
+        font-size: 18px;
+      }
+  }
+  @media (max-width: 900px) {
+    .grid-container {
+      margin: 0 0.5rem;
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .grid-container {
+      margin: 0 0.5rem;
+      .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+      }
+      .square h1 {
+        font-size: 14px;
+      }
+    }
+  }
+  /****************/
+  /* Titres tutos */
+  /****************/
+  @media (max-width: 1200px) {
+    #tuto-titles table tr td h2{
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    #tuto-titles table tr td h2{
+      font-size: 0.85rem;
+    }
+  }
+  
+  /****************************/
+  /* Div container tutos */
+  /****************************/
+  .tuto-content {
+    margin: 0 5em;
+  }
+  header {
+    display: grid;
+    grid-template: 60px / auto 1fr auto;
+    align-items: center;
+    background-color: rgb(128, 44, 83);
+  }
+  .app-links {
+    justify-self: end;
+  }
+  .brand-name {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  .brand-name a {
+    text-decoration: none;
+    color: white;
+  }
+  .brand-name a span {
+    font-weight: 500;
+    background: linear-gradient(-35deg, #039c7d 45%, #08e3b7 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .drawer-toggle .bar {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+  }
+  .drawer-toggle {
+    display: flex;
+    justify-self: end;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    width: 35px;
+    padding-right: 16px;
+    cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    header {
+      padding: 0 16px;
+    }
+    header:nth-child {
+      justify-self: end !important;
+    }
+    .app-links {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    header {
+      padding: 0 64px;
+    }
+    .app-links {
+      display: block;
+    }
+    .drawer-toggle {
+      display: none;
+    }
+  }
