@@ -53,8 +53,68 @@ a:hover {
     margin: 0 16px;
   }
 
-
-  /* Responsive Styles */
+  header {
+    display: grid;
+    grid-template: 60px / auto 1fr auto;
+    align-items: center;
+    background-color: rgb(128, 44, 83);
+  }
+  .app-links {
+    justify-self: end;
+  }
+  .brand-name {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  .brand-name a {
+    text-decoration: none;
+    color: white;
+  }
+  .brand-name a span {
+    font-weight: 500;
+    background: linear-gradient(-35deg, #039c7d 45%, #08e3b7 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .drawer-toggle .bar {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+  }
+  .drawer-toggle {
+    display: flex;
+    justify-self: end;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    width: 35px;
+    padding-right: 16px;
+    cursor: pointer;
+  }
+  
+  /* Global Responsive Styles */
+  @media (max-width: 767px) {
+    header {
+      padding: 0 16px;
+    }
+    header:nth-child {
+      justify-self: end !important;
+    }
+    .app-links {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) {
+    header {
+      padding: 0 64px;
+    }
+    .app-links {
+      display: block;
+    }
+    .drawer-toggle {
+      display: none;
+    }
+  }
   @media screen and (max-width: 767px) {
 
     .card-container > *:not(.circle-link) ,
@@ -88,7 +148,7 @@ a:hover {
 /* Template grille sections */
 /****************************/
 .grid-container {
-    margin: 0 4rem;
+    padding: 0 4rem;
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -174,6 +234,15 @@ a:hover {
   /****************/
   /* Titres tutos */
   /****************/
+  #tuto-titles {
+    table {
+      
+      padding-top: 10px;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 5px;
+    }
+  }
+
   @media (max-width: 1200px) {
     #tuto-titles table tr td h2{
       font-size: 1rem;
@@ -188,66 +257,12 @@ a:hover {
   /****************************/
   /* Div container tutos */
   /****************************/
+  .content-article {
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
   .tuto-content {
     margin: 0 5em;
-  }
-  header {
-    display: grid;
-    grid-template: 60px / auto 1fr auto;
-    align-items: center;
-    background-color: rgb(128, 44, 83);
-  }
-  .app-links {
-    justify-self: end;
-  }
-  .brand-name {
-    margin: 0 10px;
-    font-size: 1rem;
-  }
-  .brand-name a {
-    text-decoration: none;
-    color: white;
-  }
-  .brand-name a span {
-    font-weight: 500;
-    background: linear-gradient(-35deg, #039c7d 45%, #08e3b7 45%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .drawer-toggle .bar {
-    width: 90%;
-    height: 2px;
-    background-color: white;
-  }
-  .drawer-toggle {
-    display: flex;
-    justify-self: end;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 50%;
-    width: 35px;
-    padding-right: 16px;
-    cursor: pointer;
-  }
-  @media (max-width: 767px) {
-    header {
-      padding: 0 16px;
-    }
-    header:nth-child {
-      justify-self: end !important;
-    }
-    .app-links {
-      display: none;
-    }
-  }
-  @media (min-width: 768px) {
-    header {
-      padding: 0 64px;
-    }
-    .app-links {
-      display: block;
-    }
-    .drawer-toggle {
-      display: none;
-    }
   }

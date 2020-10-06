@@ -1,0 +1,15 @@
+<form class="login">
+  <div class="login-body">
+    <label>
+      Email:
+      <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+    </label>
+    <br />
+    <label>
+      Password:
+      <input type="text" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+    </label>
+    <br />
+    <button (click)="login()" type="button">Valider</button>
+  </div>
+</form>

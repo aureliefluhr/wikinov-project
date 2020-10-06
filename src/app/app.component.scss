@@ -44,6 +44,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      align-items: center;
     }
     .nav-item {
       margin: 0 10px;
@@ -60,25 +61,22 @@
     .under li:hover {
       color: #b4b4b4;
     }
-    /* .nav-list .nav-item .under {
-      display: none;
+    .nav-btn {
+      margin-left: 1rem;
+      background-color: #fe6171;
+      font-weight: bold;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+    .login-modal {
       position: absolute;
-      z-index: 1000;
-      padding: 20px 10px 3px 10px;
-      background-color: rgb(128, 44, 83);
-      color: #fefefe;
-      left: -10px;
+      top: 60px;
+      right: 10px;
+      background-color: #91506e;
+      padding: 0.5rem 0;
     }
-    .nav-list .nav-item:hover .under {
-      display: block;
-    }
-    .under li {
-      width: 100%;
-      float: none;
-      text-align: left;
-      list-style: none;
-      padding: 5px 0 5px 0;
-    } */
   }
 
   @media (max-width: 767px) {
@@ -88,23 +86,6 @@
     .nav-item {
       margin: 16px 0 16px 0;
     }
-    /* .nav-item > a {
-      display: block;
-      background: #000037;
-      border-radius: 0 20px 20px 0;
-    }
-    .nav-list .nav-item .under {
-      display: block;
-      position: relative;
-      background-color: transparent;
-      padding: 0;
-    }
-    .under li {
-      list-style-type: square;
-      padding: 0;
-      padding-left: 40px;
-      text-align: left;
-    } */
   }
   @media (min-width: 768px) {
     .nav-list {
@@ -113,16 +94,18 @@
   }
 
   .content {
-      max-width: 80%;
-      margin: 0 auto;
-      margin-top: 90px;
+    min-height: 85vh;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 90px;
   }
 
   footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
     width: 100%;
+    top: 0;
+    left: 0;
     background-color: #333;
     color: #fff;
     margin-top: 8px;
@@ -133,8 +116,8 @@
   
   svg#Calque_1 {
     position: fixed;
-    right: -50%;
-    top: 60px;
+    right: 0;
+    top: 0;
     z-index: -10;
     width: auto;
     height: 100vh;

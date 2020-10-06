@@ -10,6 +10,7 @@ import {DropboxComponent} from './pages/dropbox/dropbox.component';
 import {CommercialComponent} from './pages/commercial/commercial.component';
 import {BackofficeComponent} from './pages/digital/backoffice/backoffice.component';
 import {DeveloppementComponent} from './pages/digital/developpement/developpement.component';
+import {LoginComponent} from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'dropbox', component: DropboxComponent},
   { path: 'commercial', component: CommercialComponent},
   { path: 'digital/backoffice', component: BackofficeComponent},
-  { path: 'digital/developpement', component: DeveloppementComponent},];
+  { path: 'digital/developpement', component: DeveloppementComponent},
+  { path: 'auth', component: LoginComponent},
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

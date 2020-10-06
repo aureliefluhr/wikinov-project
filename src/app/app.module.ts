@@ -13,6 +13,9 @@ import { CommercialComponent } from './pages/commercial/commercial.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BackofficeComponent } from './pages/digital/backoffice/backoffice.component';
 import { DeveloppementComponent } from './pages/digital/developpement/developpement.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { DeveloppementComponent } from './pages/digital/developpement/developpem
     CommercialComponent,
     HomeComponent,
     BackofficeComponent,
-    DeveloppementComponent
+    DeveloppementComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
