@@ -20,8 +20,11 @@
       <li class="nav-item">
         <a href="/dropbox">Dropbox</a>
       </li>
-      <li class="nav-btn">
+      <li class="nav-btn" [hidden]="!checkConnected" (ngModelChange)="checkConnected()">
         <a href="/auth">Connexion</a>
+      </li>
+      <li class="nav-btn" [hidden]="checkConnected" (ngModelChange)="checkConnected()">
+        <a href="#" (click)="logout()">Connecté</a>
       </li>
     </ul>
   </nav>

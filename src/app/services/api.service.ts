@@ -1,34 +1,34 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-// import { LocalstorageService } from '../storage/localstorage.service';
+// import { LocalStorageService } from './localStorage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   
-  public API_URL : string = "http://localhost:4200";
+  public API_URL : string = "http://localhost:1337";
   private REQUEST_HEADER : object = {
     headers : { 
-      // API_KEY : "4a9e6fe1-6289-4b63-b2a7-e081a957327f" 
+    // API_KEY : "4a9e6fe1-6289-4b63-b2a7-e081a957327f" 
     }, 
   };
 
   constructor(
     private http : HttpClient,
-    // private localstorage : LocalstorageService
+    // private localstorage : LocalStorageService
   ) { }
 
-  // private async loadToken() {
-  //   const accessToken = await this.localstorage._TOKEN();
-  //   this.REQUEST_HEADER['headers'].Authorization = `Bearer ${accessToken}`;
-  // }
+// private async loadToken() {
+//   const accessToken = await this.localstorage._TOKEN();
+//   this.REQUEST_HEADER['headers'].Authorization = `Bearer ${accessToken}`;
+// }
 
   public async login(email : string, password : string) : Promise<any> {
     return await new Promise((resolve, reject) => {
       try {
-        this.http.post(`${this.API_URL}/auth`,  
+        this.http.post(`${this.API_URL}/sf/login`,  
           { 
             email : email, 
             password : password, 
@@ -113,5 +113,4 @@ export class ApiService {
         .catch(err => reject(err));
     });
   }
-
 }

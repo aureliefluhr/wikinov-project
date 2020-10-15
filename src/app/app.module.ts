@@ -16,6 +16,8 @@ import { DeveloppementComponent } from './pages/digital/developpement/developpem
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule }   from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { FormsModule }   from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    QuillModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

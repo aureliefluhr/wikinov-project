@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { LocalStorageService } from '../../services/localStorage.service';
 
 @Component({
   selector: 'app-login',
@@ -9,21 +10,24 @@ import { ApiService } from '../../services/api.service';
 
 export class LoginComponent implements OnInit {
 
-  constructor(public api: ApiService) { }
+  constructor(
+    public api: ApiService, 
+    private localstorage : LocalStorageService) { }
 
   email: string = "";
   password: string = "";
 
-  login () {
-    this.api.login(this.email, this.password).then(res =>{
-      console.log(res);
+  async login () {
+    await this.api.login(this.email, this.password).then(res => {
+      this.localstorage.login(res);
     })
     .catch(err =>{
       console.log(err)
     })
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.localstorage.checkLogin();
   }
 
 }
