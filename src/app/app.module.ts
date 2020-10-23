@@ -13,6 +13,7 @@ import { CommercialComponent } from './pages/commercial/commercial.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BackofficeComponent } from './pages/digital/backoffice/backoffice.component';
 import { DeveloppementComponent } from './pages/digital/developpement/developpement.component';
+import { AcademyComponent } from './pages/academy/academy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule }   from '@angular/forms';
@@ -33,6 +34,7 @@ import { QuillModule } from 'ngx-quill';
     BackofficeComponent,
     DeveloppementComponent,
     LoginComponent,
+    AcademyComponent,
   ],
   imports: [
     BrowserModule,
