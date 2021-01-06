@@ -1,27 +1,36 @@
-<div>
-  <h1>  Poster un article  </h1>
-  <div>
-    <form>
-      <div>
-        <label>Sélectionnez une page</label>
-        <select required>
-          <option ngModel *ngFor="let page of pages" [name]="page.wk_nom_page" [value]="page.wk_id_page">
-            {{ page.wk_titre_page }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <label>Sélectionnez une section</label>
-        <select required>
-          <option ngModel *ngFor="let section of sections" [name]="section.wk_nom_section" [value]="section.wk_id_section">
-            {{ section.wk_titre_section }}
-          </option>
-        </select>
-        <label>Créer une section</label>
-        <input type="text">
-        <button>Ajouter</button>
-      </div>
-      <quill-editor [styles]="{height: '200px'}"></quill-editor>
-    </form>
+<div class="container">
+  <div class="form-container">
+    <h1> Poster un article </h1>
+    <app-underline></app-underline>
+    <div>
+      <form>
+        <div class="form-flex">
+          <div>
+            <h3> <span>1</span> Sélectionnez une page </h3>
+            <select required>
+              <option ngModel *ngFor="let page of pages" [name]="page.wk_nom_page" [value]="page.wk_id_page" (click)="getPages()">
+                {{ page.wk_titre_page }}
+              </option>
+            </select>
+          </div>
+          <div>
+            <h3> <span>2</span> Sélectionnez une section </h3>
+            <select required>
+              <option ngModel *ngFor="let section of sections" [name]="section.wk_nom_section" [value]="section.wk_id_section" (click)="getSections()">
+                {{ section.wk_titre_section }}
+              </option>
+            </select>
+          </div>
+          <div>
+            <h3> <span>+</span> Créez une section </h3>
+            <input type="text"><br>
+            <button>Ajouter</button>
+          </div>
+        </div>
+        <h3> <span>3</span> Créez du contenu </h3>
+        <quill-editor></quill-editor>
+        <button>Poster</button>
+      </form>
+    </div>
   </div>
 </div>

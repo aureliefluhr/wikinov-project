@@ -18,6 +18,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule }   from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { QuillModule } from 'ngx-quill';
+import { UnderlineComponent } from './composants/underline/underline.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { QuillModule } from 'ngx-quill';
     BackofficeComponent,
     DeveloppementComponent,
     LoginComponent,
+    UnderlineComponent,
   ],
   imports: [
     BrowserModule,
