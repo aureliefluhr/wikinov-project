@@ -7,6 +7,7 @@ import {AdministrativeComponent} from './pages/administrative/administrative.com
 import {AdminComponent} from './pages/admin/admin.component';
 import {DigitalComponent} from './pages/digital/digital.component';
 import {DropboxComponent} from './pages/dropbox/dropbox.component';
+import {AcademyComponent} from './pages/academy/academy.component';
 import {CommercialComponent} from './pages/commercial/commercial.component';
 import {BackofficeComponent} from './pages/digital/backoffice/backoffice.component';
 import {DeveloppementComponent} from './pages/digital/developpement/developpement.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'digital', component: DigitalComponent},
   { path: 'dropbox', component: DropboxComponent},
   { path: 'commercial', component: CommercialComponent},
+  { path: 'academy', component: AcademyComponent},
   { path: 'digital/backoffice', component: BackofficeComponent},
   { path: 'digital/developpement', component: DeveloppementComponent},
   { path: 'auth', component: LoginComponent},
